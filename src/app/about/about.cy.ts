@@ -5,7 +5,9 @@ import {AboutComponent} from './about.component'
 
 describe('About', () => {
   it('mounts', () => {
-    cy.intercept('GET', '**quotes**', {
+    cy.intercept({
+      method: 'GET'
+    }, {
       statusCode: 200,
       body: {
         id: 1,
